@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Ilha Imóveis</title>
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+       
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .loader {
+            border-top-color: #312782;
+            -webkit-animation: spinner 1.5s linear infinite;
+            animation: spinner 1.5s linear infinite;
+        }
+
+        .img {
+            width: 400px;
+        }
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    
+    <script>
+     
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#312782',
+                        'brand-yellow': '#edae0f',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+
+    <div class="min-h-screen bg-brand-blue flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
+        
+        <div class="w-full max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+               
+                <div class="text-white text-center lg:text-left">
+                    <img src="img/Logo_S_Amarelo_EscritaBranca (2).png" alt="" class="img">
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                        <span class="text-brand-yellow"> Há 12 anos</span> transformando sonhos em endereços.
+                    </h1>
+                    <div class="flex justify-center lg:justify-start space-x-4">
+                        <div class="bg-white/20 p-3 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-yellow"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                         <div class="bg-white/20 p-3 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-yellow"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="bg-white p-8 rounded-2xl shadow-2xl w-full">
+                    <h2 class="text-2xl font-bold text-brand-blue mb-2">Fale com um especialista</h2>
+                    <p class="text-gray-600 mb-6">É rápido e fácil!</p>
+                    
+                    <form id="contact-form" novalidate>
+                        <div class="space-y-5">
+                          
+                            <div>
+                                <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-brand-yellow focus:border-brand-yellow transition duration-200" placeholder="Seu nome completo">
+                            </div>
+                            
+                            
+                            <div>
+                                <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone / WhatsApp</label>
+                                <input type="tel" id="telefone" name="telefone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-brand-yellow focus:border-brand-yellow transition duration-200" placeholder="(00) 00000-0000">
+                            </div>
+                            
+                           
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-brand-yellow focus:border-brand-yellow transition duration-200" placeholder="seu.email@exemplo.com">
+                            </div>
+
+                            <div>
+                                <label for="corretor" class="block text-sm font-medium text-gray-700 mb-1">Corretor</label>
+                                <input type="text" id="corretor" name="corretor" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-brand-yellow focus:border-brand-yellow transition duration-200" placeholder="Nome do corretor que te atendeu">
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="privacy" name="privacy" type="checkbox" required class="focus:ring-brand-yellow h-4 w-4 text-brand-blue border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="privacy" class="font-medium text-gray-700">Eu li e concordo com a <a href="img/politica.html" class="text-brand-blue hover:underline" target="_blank">Política de Privacidade</a>.</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <button type="submit" id="submit-button" class="w-full bg-brand-yellow text-brand-blue font-bold py-4 px-4 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400 transition-transform transform hover:scale-105 flex items-center justify-center">
+                                <span id="button-text">Enviar Contato</span>
+                                <div id="button-loader" class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 hidden"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="feedback-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white rounded-lg shadow-xl p-6 max-w-sm w-full text-center">
+            <div id="modal-icon" class="mx-auto flex items-center justify-center h-12 w-12 rounded-full">
+            </div>
+            <h3 id="modal-title" class="text-lg leading-6 font-medium text-gray-900 mt-4"></h3>
+            <div class="mt-2">
+                <p id="modal-message" class="text-sm text-gray-500"></p>
+            </div>
+            <div class="mt-4">
+                <button type="button" id="close-modal-button" class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-brand-blue text-base font-medium text-white hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue sm:text-sm">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            const submitButton = document.getElementById('submit-button');
+            const buttonText = document.getElementById('button-text');
+            const buttonLoader = document.getElementById('button-loader');
+            
+            // Elementos do Modal
+            const feedbackModal = document.getElementById('feedback-modal');
+            const modalIcon = document.getElementById('modal-icon');
+            const modalTitle = document.getElementById('modal-title');
+            const modalMessage = document.getElementById('modal-message');
+            const closeModalButton = document.getElementById('close-modal-button');
+
+            const webhookUrl = 'URL_DO_SEU_WEBHOOK_AQUI';
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+
+                // Validação simples
+                if (!form.checkValidity()) {
+                    showFeedbackModal('error', 'Erro de Validação', 'Por favor, preencha todos os campos obrigatórios corretamente.');
+                    return;
+                }
+                
+                // Mostra o loader e desabilita o botão
+                setLoading(true);
+
+                // Coleta os dados do formulário
+                const formData = new FormData(form);
+                const data = {
+                    nome: formData.get('nome'),
+                    telefone: formData.get('telefone'),
+                    email: formData.get('email'),
+                    corretor: formData.get('corretor'),
+                    privacy: formData.get('privacy') === 'on', 
+                    dataEnvio: new Date().toISOString() 
+                };
+
+                // Envia os dados para o Webhook
+                fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Se a resposta for OK (ex: status 200)
+                        return response.text();
+                    }
+                    // Se houver um erro na resposta
+                    throw new Error('Houve um problema com a resposta da rede.');
+                })
+                .then(text => {
+                    console.log('Sucesso:', text);
+                    showFeedbackModal('success', 'Enviado com Sucesso!', 'Recebemos seu contato. Em breve um de nossos especialistas retornará.');
+                    form.reset(); // Limpa o formulário
+                })
+                .catch((error) => {
+                    console.error('Erro:', error);
+                    showFeedbackModal('error', 'Ocorreu um Erro', 'Não foi possível enviar seu contato. Por favor, tente novamente mais tarde.');
+                })
+                .finally(() => {
+                    // Esconde o loader e reabilita o botão
+                    setLoading(false);
+                });
+            });
+            
+            // Função para controlar o estado de carregamento do botão
+            function setLoading(isLoading) {
+                if (isLoading) {
+                    submitButton.disabled = true;
+                    buttonText.classList.add('hidden');
+                    buttonLoader.classList.remove('hidden');
+                } else {
+                    submitButton.disabled = false;
+                    buttonText.classList.remove('hidden');
+                    buttonLoader.classList.add('hidden');
+                }
+            }
+
+            // Função para exibir o modal de feedback
+            function showFeedbackModal(type, title, message) {
+                // Limpa classes anteriores
+                modalIcon.innerHTML = '';
+                modalIcon.classList.remove('bg-green-100', 'bg-red-100');
+
+                if (type === 'success') {
+                    modalIcon.classList.add('bg-green-100');
+                    modalIcon.innerHTML = `<svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>`;
+                } else { // error
+                    modalIcon.classList.add('bg-red-100');
+                    modalIcon.innerHTML = `<svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`;
+                }
+
+                modalTitle.textContent = title;
+                modalMessage.textContent = message;
+                feedbackModal.classList.remove('hidden');
+            }
+
+            // Event listener para fechar o modal
+            closeModalButton.addEventListener('click', () => {
+                feedbackModal.classList.add('hidden');
+            });
+            feedbackModal.addEventListener('click', (e) => {
+                if (e.target === feedbackModal) {
+                    feedbackModal.classList.add('hidden');
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>
